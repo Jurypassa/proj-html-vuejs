@@ -34,12 +34,7 @@
           <img src="../../assets/img/avada-nightclub-play-showreel-400x95.png" alt="">
       </div>
       <!-- fine sezione view -->
-
-
-
-
-
-
+      
       </div>
   </header>
 </template>
