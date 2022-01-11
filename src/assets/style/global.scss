@@ -13,4 +13,14 @@ body{
 .container{
     width: 65%;
     margin: 0 auto;
+};
+
+button{
+    text-transform: uppercase;
+    border: none;
+    padding: 20px 40px;
+    font-weight: bold;
+    font-size: 15px;
+    letter-spacing: 2px;
+    color: $color-primary;
 }
