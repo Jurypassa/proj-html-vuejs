@@ -1,26 +1,63 @@
 <template>
   <section>
 
-      <div class="container">
+    <div class="container">
 
-          <!-- inizio sezione welcome -->
-            <div class="welcome">
-                <h3>welcome to avada</h3>
-                <h2>have the night of your life</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque numquam voluptatem excepturi obcaecati ea optio similique odio corporis, ipsa eligendi impedit deleniti nemo sapiente quaerat nisi voluptates! Fuga, aliquid vero.</p>
+        <!-- inizio sezione welcome -->
+        <div class="welcome">
+            <h3>welcome to avada</h3>
+            <h2>have the night of your life</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti sed porro consectetur, fugit illum quas? Illum repellendus quisquam commodi iste nihil temporibus, fugit ducimus. Libero officiis repudiandae at mollitia vel.
+            Tenetur autem unde animi. Illo doloribus consequuntur cupiditate dignissimos.</p>
+        </div>
+        <!-- fine sezione welcome -->
+        
+        <!-- inizio sezione card -->
+        <div class="clearfix">
+            <div class="cardwelcome" v-for="(card, index) in cards" :key="index">
+                <Cardwelcome :info="card"/>
             </div>
-      <!-- fine sezione welcome -->
+        </div>
+        
+        <!-- fine sezione card -->
+    </div>
 
-      </div>
-      
-      
+    
 
   </section>
+  
 </template>
 
 <script>
+import Cardwelcome from "../elements/Cardwelcome.vue"
+
 export default {
-    name: "Welcome"
+    name: "Welcome",
+    components: {
+        Cardwelcome
+    },
+    data() {
+        return{
+            cards: [
+                {
+                    image: "avada-nightclub-dancelounge-small.jpg",
+                    name: "dance lounge"
+                },
+                {
+                    image: "avada-nightclub-rooftoplounge-small.jpg",
+                    name: "rooftop bar"
+                },
+                {
+                    image: "avada-nightclub-viplounge-small.jpg",
+                    name: "vip lounge"
+                },
+                {
+                    image: "avada-nightclub-events-small.jpg",
+                    name: "resident dj"
+                },
+            ]
+        }
+    }
 }
 </script>
 
@@ -28,7 +65,7 @@ export default {
 @import "../../assets/style/partials/variable.scss";
 
     section{
-        height: 1500px;
+        height: 1800px;
         background-image: url(../../assets/img/avada-nightclub-cloud-background.jpg);
         background-size: 125%;
         background-position-x: center;
@@ -57,6 +94,27 @@ export default {
 
         p{
             text-align: center;
+            font-size: 14px;
+            padding-bottom: 40px
         }
+    };
+
+
+    .clearfix{
+        margin-top: 50px;
+
+        &:after{
+        content: "";
+        display: table;
+        clear: both;
+        }
+    };
+    
+
+    .cardwelcome{
+        width: 50%;
+        float: left;
+        
     }
+
 </style>
