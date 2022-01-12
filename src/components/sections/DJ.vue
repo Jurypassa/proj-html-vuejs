@@ -1,6 +1,9 @@
 <template>
   <section>
-      <CardDJ/>
+      
+      <div class="CardDJ" v-for="(card, index) in cards" :key="index">
+          <CardDJ :info="card"/>
+      </div>
   </section>
 </template>
 
@@ -33,6 +36,9 @@ export default {
 
 <style lang="scss" scoped>
     section{
-        height: 300px;
+        display: flex;
+        width: 100%;
+        height: 700px;
+        overflow: hidden;
     }
 </style>

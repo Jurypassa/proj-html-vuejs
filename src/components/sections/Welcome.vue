@@ -18,8 +18,8 @@
                 <Cardwelcome :info="card"/>
             </div>
         </div>
-        
         <!-- fine sezione card -->
+        
     </div>
 
     
