@@ -1,42 +1,64 @@
 <template>
-  <header id="header">
+    <header id="header">
 
-      <div class="container">
-          
-      <!-- inizio sezione navbar -->
-        <div class="nav">
-            <Barra/>
+        <!-- inizio sezione carrello -->
+        <div class="squares">
+
+            <div class="square uno">
+                <i class="grey fas fa-laptop"></i>
+                <p class="grey">Demos</p>
+            </div>
+
+            <div class="square due">
+
+                <div class="saldi">
+                    <i class="green dollaro fas fa-dollar-sign"></i>
+                    <span class="green">39</span>
+                </div>
+
+                <p class="grey">On sale</p>
+
+            </div>
         </div>
-      <!-- fine sezione navbar -->
+        <!-- fine sezione carrello -->
 
-      <!-- inizio sezione Hero -->
-      <div class="hero">
-          <img src="../../assets/img/avada-nightclub-homepage-image.png" alt="home page image">
-      </div>
-      <!-- fine sezione Hero -->
 
-      <!-- inizio sezione memories -->
-      <div class="memories">
-          <h2>making memories all night long</h2>
-      </div>
-      <!-- fine sezione memories -->
+        <div class="container">
+          
+            <!-- inizio sezione navbar -->
+            <div class="nav">
+                <Barra/>
+            </div>
+            <!-- fine sezione navbar -->
 
-      <!-- inizio sezione bottone -->
-      <div class="button">
-        <button>
-          become a vip
-        </button>
-      </div>
-      <!-- fine sezione bottone -->
+            <!-- inizio sezione Hero -->
+            <div class="hero">
+                <img src="../../assets/img/avada-nightclub-homepage-image.png" alt="home page image">
+            </div>
+            <!-- fine sezione Hero -->
 
-      <!-- inizio sezione view -->
-      <div class="view">
-          <img src="../../assets/img/avada-nightclub-play-showreel-400x95.png" alt="">
-      </div>
-      <!-- fine sezione view -->
+            <!-- inizio sezione memories -->
+            <div class="memories">
+                <h2>making memories all night long</h2>
+            </div>
+            <!-- fine sezione memories -->
+
+            <!-- inizio sezione bottone -->
+            <div class="button">
+                <button>
+                become a vip
+                </button>
+            </div>
+            <!-- fine sezione bottone -->
+
+            <!-- inizio sezione view -->
+            <div class="view">
+                <img src="../../assets/img/avada-nightclub-play-showreel-400x95.png" alt="">
+            </div>
+            <!-- fine sezione view -->
       
-      </div>
-  </header>
+        </div>
+    </header>
 </template>
 
 <script>
@@ -58,6 +80,61 @@ export default {
         background-image: url(../../assets/img/avada-nightclub-home-hero.jpg);
         background-size: cover;
     };
+
+    .squares{
+        position: fixed;
+        z-index: 2;
+        top: 170px;
+        right: 20px;
+
+        .square{
+            background-color: white;
+            margin-bottom: 5px;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            
+            p{
+                color: black;
+                font-size: 12px;
+                font-weight: bold;
+                letter-spacing: 1px;
+                margin: 0;
+            }
+        }
+    };
+
+    .uno{
+        
+        .grey{
+            font-size: 30px;
+        }
+    };
+
+    .saldi{
+        padding-right: 5px;
+        .dollaro{
+            vertical-align: top;
+            padding-top: 8px;
+        }
+
+        span{
+            font-size: 30px;
+        }
+    }
+
+    .grey{
+        color: #33475b;
+    };
+
+    .green{
+        color: green;
+        font-weight: bold;
+    }
 
     .nav{
         padding-top: 20px;
@@ -88,7 +165,13 @@ export default {
         
         button{
             background-color: $color-hot;
+
+            &:hover{
+            background-color: $hot-hover;
         }
+        };
+
+        
     };
 
     .view{
@@ -97,6 +180,7 @@ export default {
 
         img{
             width: 23%;
+            cursor: pointer;
         }
     }
 </style>

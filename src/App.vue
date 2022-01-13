@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    
     <Header/>
     <Main/>
     <Footer/>
@@ -22,5 +23,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import "./assets/style/global.scss"
+@import "./assets/style/global.scss";
+
 </style>

@@ -73,6 +73,10 @@ export default {
 
     .bgdcpink{
         background-color: $color-hot;
+
+        &:hover{
+            background-color: $hot-hover;
+        }
     };
 
     .borderpink{
@@ -88,5 +92,10 @@ export default {
 
     .bgdcblue{
         background-color: $color-cold;
+
+        &:hover{
+            background-color: $cold-hover;
+        }
+
     }
 </style>

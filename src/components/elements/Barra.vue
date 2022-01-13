@@ -17,12 +17,25 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../../assets/style/partials/variable.scss";
+
   h4{
     display: inline-block;
     text-transform: uppercase;
     margin-top: 50px;
     font-weight: bold;
+    cursor: pointer;
+    padding-bottom: 15px;
+
+    &:hover{
+      color: $color-hot;
+      border-bottom: 3px solid $color-hot;
+    }
   };
+
+  img{
+    cursor:pointer;
+  }
 
   #navbar{
     height: 132px;
